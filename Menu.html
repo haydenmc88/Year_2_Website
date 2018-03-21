@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+  <title>Menu</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </head>
+  <meta charset="UTF-8">
+<title> Menu </title>
+  <body>
+    <!-- start of nav section -->
+    <nav class="navbar navbar-inverse">
+            <!-- nav header/ branding -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"> The Crown</a> 
+            </div>
+            <!-- List containing nav links -->
+            <ul class="nav navbar-nav">
+                <li><a href="Index.html">Home</a></li>
+				<li class="active"> <a href="Index.html">Menu</a></li>
+                <li><a href="Order.html">Order</a></li>
+                <li><a href="Feedback.html">Feedback</a></li>
+            </ul>
+			
+			<ul class="nav navbar-nav navbar-right">
+            <li><a href="SignIn.html"> <li class="active"> <span class="glyphicon glyphicon-user"></span> Sign In</a></li>
+            </ul>
+    </nav
+			
+
+	
+	<div class="container">  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+	  <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+	
+      <div class="item active">
+         <img src="burgers(menu).jpg" alt="burgers(menu)" style="width:100%;">
+		    ​<div class="carousel-caption">
+                    <h2><strong>Delicious Homemade Burgers</strong> </h2>
+                 
+            </div>
+	  </div>
+
+      <div class="item">
+        <img src="fries.jpg" alt="1" style="width:100%;""height:100%">
+		​<div class="carousel-caption">
+		        <h2><strong>Fresh Crispy Fries </strong> </h2>
+             
+		</div>
+      </div>
+	  
+	  <div class="item">
+        <img src="drinks.jpg" alt="2" style="width:100%""height:100%">
+		​<div class="carousel-caption">
+                <h2> <strong>Ice Cold Drinks To Go With Your Meal </strong> </h2>
+				
+		</div>
+      </div>
+	  
+	  <div class="item">
+        <img src="milkshakes2.jpg" alt="3" style="width:100%" "height:50%" >
+		​<div class="carousel-caption">
+                <h2> <strong> Classic made milkshakes are also available </strong> </h2>
+		</div>
+      </div>
+	  
+    
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<h2>See Menu Below &#8595; </h2>
+
+<p>Click on a button to choose list view or grid view.</p>
+
+<div id="btnContainer">
+<button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
+<button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+</div>
+<br>
+
+<div class="row">
+  <div class="column" style="background-color:#ffffff;">
+    <h2><strong><u>Burgers</u></strong></h2>
+	<p><li>Regular Burger</li></p>
+    <p><li>Bacon cheeseburger</li></p>
+	<p><li>Cheeseburger</li></p>
+	<p><li>The Double (two meats)</li></p>
+  </div>
+  <div class="column" style="background-color:#FFFFFF;">
+    <h2><strong><u>Fries</u></strong></h2>
+    <p><li>Regular Fries</li></p>
+	<p><li>Bacon Fries</li></p>
+	<p><li>Cheese Fries</li></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#FFFFFF;">
+    <h2><strong><u>Drinks</u></strong></h2>
+    <p><li>Coca Cola<li></p>
+	<p><li>7-up</li></p>
+	<p><li>Fanta Orange</li></p>
+	<p><li>Tea</li></p>
+	<p><li>Coffee</li></p>
+	<p><li>Water</li></p>
+  </div>
+  
+  
+  <div class="column" style="background-color:#FFFFFF;">
+    <h2><strong><u>Milkshakes</u></strong></h2>
+    <p><li>Chocolate</li></p>
+	<p><li>Strawberry</li></p>
+	<p><li>Mint</li></p>
+	<p><li>Vanilla</li></p>
+  </div>
+</div>
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// List View
+function listView() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.width = "100%";
+    }
+}
+
+// Grid View
+function gridView() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.width = "50%";
+    }
+}
+
+/* Optional: Add active class to the current button (highlight it) */
+var container = document.getElementById("btnContainer");
+var btns = container.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
+			
+	
+    <footer class="container-fluid text-center">
+        <p></p>
+    </footer>
+
+
+  </body>
+</html>
