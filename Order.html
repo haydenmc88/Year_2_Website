@@ -37,6 +37,11 @@
 
 <style>
 
+
+.container {
+width: 100%;
+}
+
 body{
 	background-color: #ffdd99;
 }
@@ -119,74 +124,97 @@ body{
       <tr>
         <th>Item</th>
 		<th>Price</th>
-		<th>Buy</th>
+		<th>Quantity</th>
+		<th>Buy</th>	
       </tr>
     </thead>
 	<tbody>
 	  <tr>
 		<td>Ketchup</td>
 		<td>25c</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	  <tr>
 		<td>Mayo</td>
 		<td>25c</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	  <tr>
 		<td>BBQ</td>
 		<td>25c</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	   <tr>
 		<td>Pickles</td>
 		<td>25c</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	  <tr>
 		<td>Onion</td>
-		<td>25c</td>
+		<td>50c</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	  <tr>
 		<td>Lettuce</td>
-		<td>25c</td>
+		<td>€1.00</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	   <tr>
 		<td>Coleslaw</td>
-		<td>25c</td>
+		<td>50c</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	  <tr>
 		<td>Cheese</td>
-		<td>25c</td>
+		<td>50c</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	  <tr>
 		<td>Tomato</td>
-		<td>25c</td>
+		<td>50c</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	   <tr>
 		<td>Bacon</td>
-		<td>25c</td>
+		<td>€1.00</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	  <tr>
 		<td>Bun</td>
-		<td>25c</td>
+		<td>€1.50</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	  <tr>
 		<td>Meat</td>
-		<td>25c</td>
+		<td>€2.50</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
     </tbody>
   </table>
-    <li class="grey"><a href="#" class="button">Checkout</a></li>
-	<!--<script>alert("Order Sucessful");</script>-->
   </ul>
 </div>
 
@@ -197,30 +225,36 @@ body{
 		<table class="table">
     <thead>
       <tr>
-        <th>Item</th>
+       <th>Item</th>
 		<th>Price</th>
+		<th>Quantity</th>
 		<th>Buy</th>
       </tr>
     </thead>
 	<tbody>
 	  <tr>
 		<td>Small</td>
-		<td>$2.00</td>
+		<td>€2.00</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	  <tr>
 		<td>Medium</td>
-		<td>$2.50</td>
+		<td>€2.50</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	  <tr>
 		<td>Large</td>
-		<td>$3.00</td>
+		<td>€3.00</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
     </tbody>
   </table>
-    <li class="grey"><a href="#" class="button">Checkout</a></li>
   </ul>
 </div>
 
@@ -233,103 +267,108 @@ body{
       <tr>
         <th>Item</th>
 		<th>Price</th>
+		<th>Quantity</th>
 		<th>Buy</th>
       </tr>
     </thead>
 	<tbody>
 	  <tr>
 		<td>Coke</td>
-		<td>25c</td>
+		<td>€2.10</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	  <tr>
 		<td>Diet Coke</td>
-		<td>25c</td>
+		<td>€2.10</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	  <tr>
 		<td>Coke Zero</td>
-		<td>25c</td>
+		<td>€2.10</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	   <tr>
 		<td>Fanta</td>
-		<td>25c</td>
+		<td>€2.10</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	  <tr>
 		<td>Sprite</td>
-		<td>25c</td>
+		<td>€2.10</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	  <tr>
 		<td>Water</td>
-		<td>25c</td>
+		<td>€1.00</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	   <tr>
 		<td>Strawberry Milkshake</td>
-		<td>25c</td>
+		<td>€2.90</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	  <tr>
 		<td>Chocolate Milkshake</td>
-		<td>25c</td>
+		<td>€2.90</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	  <tr>
 		<td>Vanilla Milkshake</td>
-		<td>25c</td>
+		<td>€2.90</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	   <tr>
 		<td>Tea</td>
-		<td>25c</td>
+		<td>€1.90</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	  <tr>
 		<td>Latte</td>
-		<td>25c</td>
+		<td>€2.85</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
 	  <tr>
 		<td>Mocha</td>
-		<td>25c</td>
+		<td>€2.85</td>
+		<td><li class="quantity"><input id="number" style="width:3em" type="number"></td>
 		<td><li class="grey"><a href="#" class="button">Buy</a></li></td>
+		
       </tr>
     </tbody>
   </table>
-    <li class="grey"><a href="#" class="button">Checkout</a></li>
   </ul>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 </div>
 
 
-
-
-
-
-
-
-
-
-
+<div class="jumbotron text-center">
+    <h1>Checkout here</h1>
+        <div class="checkout">     
+				<li class="grey"><a href="#" class="button" required >Checkout here</a></li>
+        </div>
+</div>
 
 
 
@@ -347,6 +386,5 @@ body{
     <div class="col-sm-2" ></div>
 	<div class="col-sm-2" ></div>
   </div>
-
 </footer>
 </html>
