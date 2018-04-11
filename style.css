@@ -1,4 +1,84 @@
+body{
+	background-color: #1a1a1a;
+}
 
+.background-image {
+	position: center;
+	top: 100%;
+	left: auto;
+	transform: translate (-50%, -50%);
+	min-width:100%;
+	min-height:100%;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	margin:auto;
+    margin-top:-50px;
+	border: none;
+	background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+    clear:both;
+    overflow:hidden;
+	opacity: 0.8;
+}
+
+.overlay {
+	position: absolute;
+	color: white;
+	top: 45%;
+	left: 46%;
+	}
+	
+.sub-btn{
+	border: 0.1em;
+	border-style: solid;
+	border-color: #990000;
+	font-family: Sans-serif;
+	font-size: 2.5em;
+	font-weight: bold;
+	width: 100%;
+	padding: 0.6em;
+	margin-bottom: 0.6em;
+	text-align: center;
+	text-shadow: 0.0625em 0.0625em 0.0625em #000;
+	background-color: #fff;
+	color: black;
+	cursor: pointer;
+	max-width: 100%;
+	
+}
+
+.sub-btn:hover{
+	background-color: #990000;
+    transition: all ease-out 0.4s;	
+	color: #fff;
+	
+}
+
+.inp:focus, .sub-btn:focus{
+	outline: none;
+	background-color: #000000;
+	transition: all ease-out 0.3s;	
+	color: #990000;
+}
+
+.container-fluid {
+	color: #fff;
+	background-color: #990000;
+	}
+	
+.row {
+	background-color: #1a1a1a;
+	padding-bottom: 2em;
+	}
+	
+@media only screen and(max-width: 45em){
+	    .main{
+	        width: 90%
+	    }
+	}
+	
  body{
 	 background-color:  #ffffff;
  }
