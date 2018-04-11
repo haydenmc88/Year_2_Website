@@ -193,15 +193,6 @@ h6{
     font-size: 20px;
 }
 
-
-
-@media only screen and (max-width: 600px) {
-    .columns {
-        width: 100%;
-    }
-}
-
-
 div.ordernow{
 	text-align: center;	
 	padding: 20px;
