@@ -1,0 +1,25 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+
+@* Param List *@ 
+@(message: String)
+
+@main("Home Page") {
+      <div class="background-image">
+                  <img src="@routes.Assets.versioned("images/home.jpg")" style="width: 100%" >
+                  <div class="hero-text">
+                              <h1 style="font-size:50px""font-family: serif;"><b>Sign Up for Free</b></h1>
+                                <div class="container-fluid bg-2 text-center" class="btn btn-default btn-lg">
+                                          <a href="@routes.HomeController.signup()">
+                              <button class="btn btn-default btn-lg"onclick="document.getElementById('id01').style.display='block'" style="width:auto;""font-family: serif;"></span>Sign Up</button></a>
+                            </div>
+                  </div>
+            
+            
+            
+      
+      </div>
+      
+}

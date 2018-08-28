@@ -1,0 +1,95 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+
+ @import models.Product
+ @(productList: List[Product], categoryList: List[Category])
+
+ @main("Products") {
+      <!-- https://getbootstrap.com/docs/4.0/layout/grid/ -->
+      <div class="row">
+        <div class="col-sm-auto">
+          <h4>Categories</h4>
+          <!-- https://getbootstrap.com/docs/4.0/components/list-group/ -->
+          <div class="list-group text-right">
+            <a href="@routes.HomeController.products(0)" class="list-group-item  list-group-item-action">All Categories
+              <span class="badge badge-secondary">@productList.size()</span>
+            </a>
+
+            @* Start of loop - for each category in the categoryList *@
+            @* Also display the number of products in each category *@
+            
+            @for(category <- categoryList) {
+              <a href="@routes.HomeController.products(category.getId)" class="list-group-item  list-group-item-action">@category.getName
+                <span class="badge badge-secondary">@category.getProducts.size()</span>
+              </a>
+            } @* End category loop *@
+
+          </div>
+
+        </div>
+
+        <div class="col-sm-auto">
+
+            @* Display flash message - after adding a product *@
+            @if(flash.containsKey("success")) {
+              <div class="alert alert-success">
+                  @flash.get("success")
+              </div>
+            } 
+
+          <!-- https://getbootstrap.com/docs/4.0/content/tables/ -->
+          <table class="table table-hover">
+            <thead>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Category</th>
+              <th scope="col">Description</th>
+              <th scope="col">Stock</th>
+              <th scope="col">Price</th>
+            </thead>
+            <tbody>
+            @* Iterate through products, adding a new row for each in the list *@
+            @* for each product in the products list *@
+            @for(product <- productList) {
+              <tr scope="row">
+                <td>@product.getId</td>
+                <td>@product.getName</td>
+                @* Get category for this product then getName *@
+                <td>@product.getCategory.getName</td>
+                <td>@product.getDescription</td>
+                <td>@product.getStock</td>
+                <td class="text-right">&euro;@("%.2f".format(product.getPrice))</td>
+                <td>
+                  <!-- https://fontawesome.com/get-started/web-fonts-with-css -->
+                  <!-- https://fontawesome.com/icons?d=gallery -->
+                  <!-- https://getbootstrap.com/docs/4.0/components/buttons/ -->
+                    <a href="@routes.HomeController.updateProduct(product.getId)" class="btn btn-outline-danger btn-sm">
+                    <i class="far fa-edit"></i></a>
+                  </td>
+                  <!-- Delete product button -->
+                  <td>
+                    <a href="@routes.HomeController.deleteProduct(product.getId)" class="btn btn-outline-danger btn-sm"
+                    onclick="return confirmDel();">
+                    <i class="far fa-trash-alt"></i></a>
+                  </td>
+
+              </tr>
+            } @* End for loop*@
+            </tbody>
+            <tfoot>
+              <tr scope="row">
+                
+              </tr>
+            </tfoot>
+          </table>
+		  
+          <div>
+              <a href="@routes.HomeController.addProduct()">
+                <button class="btn btn-primary">Add a Product</button>
+              </a>
+          </div>
+
+        </div>
+ }

@@ -1,0 +1,57 @@
+@(addProductForm: Form[models.Product])
+@*
+    addProductForm defined above is the parameter
+    passed to this view by the controller
+@*
+@import models._
+
+@*
+    a 'helper' will be used to create the form dynamically, 
+    though a static HTML form would also work
+*@
+@import helper._
+
+@* The page will be based on the main template *@
+@main("New Product") {
+
+	<h3>Add a new Product</h3>
+	
+	@* Use the views.html.helpers package to create the form *@
+	@form(action = routes.HomeController.addProductSubmit(), 'class -> "form-horizontal", 'role->"form", 'enctype -> "multipart/form-data") {
+        @CSRF.formField
+        
+		@*  Build the form, adding an input for each field
+            Note the label parameter
+        *@
+        @* Hidden field for product id (used for updating) *@
+        @inputText(addProductForm("id"), '_label -> "", 'hidden -> "hidden")
+
+		@inputText(addProductForm("name"), '_label -> "Name",'class -> "form-control")
+        @inputText(addProductForm("description"), '_label -> "Description",'class -> "form-control")
+        
+        @* Select list categories *@
+        @* Category.options provides a hashmap of value, name pairs (see CAtegory class) *@
+        @select(
+            addProductForm("category.id"),
+            options(Category.options),
+            '_label -> "Category", '_default -> "-- Choose a category --",
+            '_showConstraints -> false, 'class -> "form-control"
+        )
+
+		@inputText(addProductForm("stock"), '_label -> "Stock",'class -> "form-control")
+		@inputText(addProductForm("price"), '_label -> "Price",'class -> "form-control")
+	
+		<br><br>
+
+	<!-- Add a submit button -->
+  <div class="actions">
+      <input type="submit" value="Add/ Update Product" class="btn btn-primary">
+	  <a href="@routes.HomeController.products(0)">
+			<button class="btn btn-warning">Cancel</button>
+	  </a>
+  </div>
+	} <!-- End Form definition -->
+
+} <!-- End of page content -->
+
+
